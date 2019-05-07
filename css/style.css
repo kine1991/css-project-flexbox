@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  color: var(--color-grey-dark-2);
+  background-image: linear-gradient(to right bottom, #ffffff, #dfdbdb);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
+/*background*/
+.home__background-image {
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)), url("../image/the-nigmatic-260023-unsplash.jpg");
+  width: 100vw;
+  height: 50vh;
+  background-size: cover;
+  background-position: center; }
+  @media only screen and (max-width: 37.5em) {
+    .home__background-image {
+      background-image: url("../image/the-nigmatic-260023-unsplash.jpg");
+      width: 100vw;
+      height: 60vh;
+      background-size: cover;
+      background-position: center;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); } }
+
+.container {
+  font-size: 2rem; }
+
+.footer {
+  font-size: 2rem; }
+
+.backdrop {
+  position: fixed;
+  display: none;
+  /* display: flex; */
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); }
+
+.header {
+  font-size: 2rem;
+  position: relative;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 5px 20px;
+  z-index: 100; }
+
+/*hamburger icon*/
+.hamburger {
+  display: flex;
+  align-items: center; }
+  .hamburger__button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0; }
+    @media only screen and (min-width: 37.5em) {
+      .hamburger__button {
+        display: none; } }
+  .hamburger__button:focus {
+    outline: none; }
+  .hamburger__button--bar {
+    width: 100%;
+    height: 0.2rem;
+    background: white;
+    display: block;
+    margin: 0.8rem 0; }
+
+/*desktop*/
+.desktop__navigation {
+  display: flex;
+  justify-content: flex-end; }
+  .desktop__navigation > *:hover {
+    color: wheat;
+    transform: translateY(1px);
+    transition: color .3s, transform .3s; }
+
+.desktop__navigation div {
+  padding-left: 20px;
+  display: none; }
+  @media only screen and (min-width: 37.5em) {
+    .desktop__navigation div {
+      display: block; } }
+
+/* Mobile navigation */
+.mobile {
+  position: fixed;
+  top: 0;
+  background: whitesmoke;
+  /* background: rgba(90, 90, 90, 0.9); */
+  width: 80vw;
+  height: 100vh;
+  /* color: white; */
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+  z-index: 101;
+  transform: translateX(-100%);
+  transition: transform 500ms ease-out; }
+  .mobile__close {
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    font-size: 3rem; }
+  .mobile__items {
+    list-style: none; }
+  .mobile__item {
+    padding: 0;
+    margin: 1rem;
+    font-size: 3rem; }
+
+.open {
+  display: flex;
+  transform: translateX(0); }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: black;
+  color: white;
+  padding: 4rem; }
+  .footer__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .footer__main > * {
+      padding: 3rem;
+      text-align: center; }
+    .footer__main-info {
+      flex: 0 0 50%; }
+    .footer__main-logo {
+      flex: 0 0 50%;
+      fill: whitesmoke; }
+      .footer__main-logo > *:hover {
+        fill: wheat;
+        transform: translate(3px);
+        transition: fill .3s ease-out, transform .3s ease-in; }
+    .footer__main-social {
+      display: flex;
+      justify-content: center;
+      flex: 0 0 100%; }
+      .footer__main-social-items {
+        padding: 0 auto;
+        list-style: none;
+        display: flex; }
+      .footer__main-social-item {
+        padding: 1rem; }
+      .footer__main-social-item > * {
+        width: 3rem;
+        height: 3rem;
+        fill: whitesmoke; }
+        .footer__main-social-item > *:hover {
+          fill: wheat;
+          transform: translateY(1px);
+          transition: fill .3s ease-out, transform .3s ease-in; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__main {
+        flex-direction: column; } }
+  .footer__copyright {
+    margin-top: 2rem; }

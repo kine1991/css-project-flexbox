@@ -1,0 +1,140 @@
+.backdrop {
+    position: fixed;
+    display: none;
+    /* display: flex; */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    font-size: 2rem;
+    position: relative;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 5px 20px;
+    z-index: 100;
+}
+
+/*hamburger icon*/
+.hamburger { 
+    display: flex;
+    align-items: center;
+
+    &__button {
+        width: 3rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        @media only screen and (min-width: $bp-small) {
+            display: none;
+        }
+    }
+      
+    &__button:focus {
+    outline: none;
+    }
+
+
+    &__button--bar {
+      width: 100%;
+      height: 0.2rem;
+      background: white;
+      display: block;
+      margin: 0.8rem 0;
+    }
+
+    
+}
+
+/*desktop*/
+.desktop{
+    &__navigation {
+        display: flex;
+        justify-content: flex-end;
+
+        & > * {
+            &:hover{
+                color: wheat;
+                transform: translateY(1px);
+                transition: color .3s, transform .3s;
+                // transition : height 3s ease-out, width 5s ease-in;
+            }
+        }
+    }
+
+    &__navigation div {
+        padding-left: 20px;
+        display: none;
+        @media only screen and (min-width: $bp-small) {
+            display: block;
+        }
+    }
+}
+
+  
+
+
+
+/* Mobile navigation */
+.mobile{
+    position: fixed;
+    top: 0;
+    background: whitesmoke;
+    /* background: rgba(90, 90, 90, 0.9); */
+    width: 80vw;
+    height: 100vh; 
+    /* color: white; */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    z-index: 101;
+
+    transform: translateX(-100%);
+    transition: transform 500ms ease-out;
+
+    &__close{
+        position: absolute;
+        top: 0rem;
+        right: 1rem;
+        font-size: 3rem;
+    }
+    
+    &__items{
+        list-style: none;
+    }
+    &__item{
+        padding: 0;
+        margin: 1rem;
+        font-size: 3rem;
+    }
+}
+
+
+
+.open {
+    display: flex;
+    transform: translateX(0);
+}
+
+// @media (min-width: 40rem) {
+//     .hamburger__button {
+//         display: none;
+//     }
+
+//     .desktop__navigation div {
+//         display: block;
+//     }
+// }

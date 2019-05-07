@@ -1,0 +1,23 @@
+{
+  "name": "flexbox-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git", 
+    "url": "git+https://github.com/kine1991/css-project-flexbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kine1991/css-project-flexbox/issues"
+  },
+  "homepage": "https://github.com/kine1991/css-project-flexbox#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
