@@ -1,0 +1,50 @@
+
+%heading{
+    font-family: $font-display;
+    font-weight: 400;
+
+    // &--light {color: $color-grey-light-1;}
+    // &--dark {color: $color-grey-dark-1;}
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 6rem;
+    text-transform: uppercase; 
+    color: $color-primary;
+    font-family: $font-primary;
+} 
+
+
+.heading-2 {
+    @extend %heading;
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1;
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.9rem;
+
+    &--light {color: $color-grey-light-1;}
+    &--dark {color: $color-grey-dark-1;}
+}
+
+
+
+.mb-sm {margin-bottom: 2rem;}
+.mb-md {margin-bottom: 3rem;}
+.mb-lg {margin-bottom: 4rem;}
+.mb-hg {margin-bottom: 8rem;}
+
+.my-sm {margin: 2rem 0;}
+.my-md {margin: 3rem 0;}
+.my-lg {margin: 4rem 0;}
+.my-hg {margin: 8rem 0;}

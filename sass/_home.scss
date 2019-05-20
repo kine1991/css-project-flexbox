@@ -1,24 +1,36 @@
 /*background*/
 .home { 
-    &__background-image {
+    &__background-image  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+        // padding: 20%;
+        // color: white;
+        // font-weight: 100;
+
         background-image: linear-gradient(
             to right bottom,
             rgba($color-white, 0.2),
             rgba($color-black, 0.2)
-        ),
+        )
+        ,
         url("../image/the-nigmatic-260023-unsplash.jpg");
 
         width: 100vw;
-        height: 50vh;
+        height: 100vh;
         background-size: cover;
         background-position: center;
+        
 
 
         @media only screen and (max-width: $bp-small) {
             background-image: url("../image/the-nigmatic-260023-unsplash.jpg");
     
             width: 100vw;
-            height: 60vh;
+            height: 80vh;
             background-size: cover;
             background-position: center;
 
@@ -33,39 +45,110 @@
 }
 
 
-// .header {
-//     height: 95vh;
-//     background-image: linear-gradient(
-//         to right bottom,
-//         rgba($color-primary-light, 0.8),
-//         rgba($color-primary-dark, 0.8)
-//       ),
-//       url(../img/hero-small.jpg);
-//     background-size: cover;
-//     background-position: top;
-//     position: relative;
-//     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-//     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  
-  
-//     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-//       -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-//       clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-//       height: 95vh;
-//   }
-  
-//     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-//       only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-//       only screen and (min-width: 125em) {
-//       background-image: linear-gradient(
-//           to right bottom,
-//           rgba($color-primary-light, 0.8),
-//           rgba($color-primary-dark, 0.8)
-//         ),
-//         url(../img/hero.jpg);
-//     }
-  
-//     @include respond(phone) {
-//       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-//       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-//     }
+
+// offers
+.offers{
+    text-align: center;
+    margin: 2rem 4rem;
+
+    @media only screen and (max-width: $bp-medium){
+        margin: 2rem 10rem;
+    }
+    @media only screen and (max-width: $bp-small){
+        margin: 2rem 1rem;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 100;
+        padding: 4rem 0;
+    }
+
+    &__items{
+        display: flex;
+
+        @media only screen and (max-width: $bp-medium){
+            flex-direction: column;
+        }
+    }
+
+    &__item{
+        padding: 0 2rem;
+        @media only screen and (max-width: $bp-medium){
+            padding: 2rem 1rem;
+        } 
+    }
+
+    &__svg{
+        padding-bottom: 2rem; 
+        width: 10rem;
+        height: 10rem;
+        fill: currentColor;
+        &:hover{
+            fill: $color-primary;
+            margin-right: .4rem;
+            transition: all .4s;
+        }
+    }
+}
+
+.bestsellers{
+    text-align: center;
+    margin: 10rem 0;
+
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-between;
+    }
+
+    &__card{
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        margin: 2rem;
+    }
+    
+    
+    &__item{
+        width: 400px;
+        margin: 2rem auto;
+        
+        position: relative;
+        overflow: hidden;
+
+        &:hover  .bestsellers__paragraph{
+            display: block;
+            transform: translate(-50%, -50%);
+            transition: all 1.7s;
+            opacity: 1;
+        }
+        
+        &:hover  .bestsellers__photo{
+            filter: blur(3px) brightness(40%);
+            transform: scale(1.03);
+            transition: all .7s;
+        }
+
+    }
+
+    &__paragraph{
+        text-transform: uppercase;
+        width: 80%;
+        color: $color-white;
+        transition: all .5s;
+        opacity: 0;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(60%, -50%);
+    }
+    
+    &__photo {
+        display: block;
+        background-size: contain;
+        width: 100%;
+        transition: all .5s;
+    }
+}
+
