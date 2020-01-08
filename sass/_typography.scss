@@ -31,20 +31,54 @@
 
 .heading-4 {
     @extend %heading;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    // color: red;
 
     &--light {color: $color-grey-light-1;}
-    &--dark {color: $color-grey-dark-1;}
+    &--dark {
+        color: $color-grey-dark-1;
+        font-weight: 300;
+        font-size: 1.6rem;
+    }
+    &--danger { 
+        color: $color-danger;
+        font-weight: 300;
+        font-size: 1.6rem;
+    }
 }
 
 
 
+.mb-xs {margin-bottom: 1rem;}
 .mb-sm {margin-bottom: 2rem;}
 .mb-md {margin-bottom: 3rem;}
 .mb-lg {margin-bottom: 4rem;}
 .mb-hg {margin-bottom: 8rem;}
 
+.my-xs {margin: 1rem 0;}
 .my-sm {margin: 2rem 0;}
 .my-md {margin: 3rem 0;}
 .my-lg {margin: 4rem 0;}
 .my-hg {margin: 8rem 0;}
+
+.ma-xs {margin: 1rem;}
+.ma-sm {margin: 2rem;}
+.ma-md {margin: 3rem;}
+.ma-lg {margin: 4rem;}
+.ma-hg {margin: 8rem;}
+
+.mx-xs {margin: 0 1rem;}
+
+.label-danger {
+    color: $color-white;
+    fill: $color-white;
+    background-color: $color-danger;
+
+    // margin: 1rem;
+    border-radius: 1rem;
+}
+
+.text-center{text-align: center;}
+.text-left{text-align: left !important;}
+.text-right{text-align: center;}

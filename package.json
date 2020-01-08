@@ -9,9 +9,11 @@
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed" ,
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://kine1991.github.io/css-project-flexbox/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kine1991/css-project-flexbox.git"
@@ -22,14 +24,13 @@
   "bugs": {
     "url": "https://github.com/kine1991/css-project-flexbox/issues"
   },
-  "homepage": "https://github.com/kine1991/css-project-flexbox#readme",
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }
-
-
